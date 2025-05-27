@@ -1,0 +1,11 @@
+/* STYLE FOR YOUR INDEX.HTML */
+
+.gray-box {
+    background-color: #f9daf7;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+  
