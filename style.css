@@ -1,11 +1,57 @@
 /* STYLE FOR YOUR INDEX.HTML */
 
-.gray-box {
-    background-color: #f9daf7;
-    height: 100px;
-    margin: 10px;
-    text-align: center;
-    padding: 20px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-  }
-  
+body {
+  margin: 0;
+  height: 100vh;
+  background: url('cats.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Sacramento', cursive;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.title {
+  font-size: 4.5rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px #00000020;
+}
+
+.start-btn {
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: #f2a5cc;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+@keyframes swing {
+  0% { transform: scale(1.05) rotate(0deg); }
+  25% { transform: scale(1.05) rotate(5deg); }
+  50% { transform: scale(1.05) rotate(0deg); }
+  75% { transform: scale(1.05) rotate(-5deg); }
+  100% { transform: scale(1.05) rotate(0deg); }
+}
+
+.start-btn:hover {
+  background-color: #f772b4;
+  animation: swing 1.5s ease-in-out infinite;
+}
+
+.start-btn:active {
+  background-color: #ea2a8a;
+  transform: scale(0.97) rotate(0deg);
+  animation: none;
+}

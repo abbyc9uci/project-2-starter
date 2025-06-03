@@ -1,1 +1,148 @@
 /* STYLE FOR YOU MAIN.HTML */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: url('content.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 4rem; 
+  }  
+  
+  .content-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+  }
+  
+  /* Section headers with slide-in animation */
+  .description h2,
+  .gallery h2,
+  .resources h2 {
+    font-size: 4rem; 
+    margin-bottom: 15px;
+    animation: slideInFromLeft 1s ease forwards;
+  }
+  
+
+  .description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+  
+  /* Gallery Flexbox */
+  .gallery-flexbox {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  /* Gallery items */
+  .gallery-flexbox img,
+  .gallery-flexbox video {
+    max-width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+  }
+  
+  /* Stagger animation delay for gallery items */
+  .gallery-flexbox img:nth-child(1),
+  .gallery-flexbox video:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+  .gallery-flexbox img:nth-child(2),
+  .gallery-flexbox video:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+  .gallery-flexbox img:nth-child(3),
+  .gallery-flexbox video:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+  
+  /* Resources list */
+  .resources ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .resources a {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .resources a:hover {
+    color: #ff85c1;
+  }
+  
+  /* Navigation links */
+  .page-links {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  
+  .page-links a {
+    color: #6a4c93;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .page-links a:hover {
+    color: #9b59b6;
+  }
+  
+  .gallery-flexbox img {
+    filter: grayscale(20%) contrast(150%);
+  }
+  
+  /* KEYFRAME ANIMATIONS */
+  
+  /* Slide in from left */
+  @keyframes slideInFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Fade in */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes breathing {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-5px) scale(1.02);
+    }
+  }
+  
+  .gallery-flexbox img {
+    animation: fadeIn 1.5s ease forwards, breathing 6s ease-in-out infinite;
+  }
+  
+  
